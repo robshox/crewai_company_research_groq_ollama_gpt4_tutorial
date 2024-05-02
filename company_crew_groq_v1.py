@@ -2,16 +2,14 @@ import os
 from crewai import Agent, Task, Crew, Process
 from crewai_tools import SerperDevTool, FileReadTool
 
-# os.environ["OPENAI_API_KEY"] = (
-#     "sk-proj-aA3JXSN0F8nQmA0VvlIvT3BlbkFJkE0rQOaFKoUcty3p663k"
-# )
-os.environ["SERPER_API_KEY"] = "yourkeyhere"  # serper.dev API key
+
+os.environ["SERPER_API_KEY"] = ""  # serper.dev API key
 
 # You can choose to use a local model through Ollama for example. See https://docs.crewai.com/how-to/LLM-Connections/ for more information.
 
 os.environ["OPENAI_API_BASE"] = "https://api.groq.com/openai/v1"
 os.environ["OPENAI_MODEL_NAME"] = "llama3-70b-8192"  # Adjust based on available model
-os.environ["OPENAI_API_KEY"] = "yourkeyhere"
+os.environ["OPENAI_API_KEY"] = ""
 
 search_tool = SerperDevTool()
 file_read_tool = FileReadTool(file_path="./emp_details.csv")

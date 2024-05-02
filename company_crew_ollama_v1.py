@@ -3,7 +3,7 @@ from crewai import Agent, Task, Crew, Process
 from crewai_tools import SerperDevTool, FileReadTool
 from langchain_openai import ChatOpenAI
 
-os.environ["SERPER_API_KEY"] = "yourkeyhere"  # serper.dev API key
+os.environ["SERPER_API_KEY"] = ""  # serper.dev API key
 
 llm = ChatOpenAI(
     model="crewaiv2-llama3", base_url="http://localhost:11434/v1", api_key="NA"
